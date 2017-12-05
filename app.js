@@ -63,6 +63,7 @@ app.use((req, res, next) => {
 
 // promisify some callback based APIs
 app.use((req, res, next) => {
+  console.log('asdas');
   req.login = promisify(req.login, req);
   next();
 });
